@@ -7,21 +7,21 @@ CAPACITY = {
 }
 
 
-def will_fit(capacity, cargo):
+def will_fit(holds, cargo):
     """ Determine if the cargo being loaded will fit with the ship's capacity.
 
     Args:
-        capacity (list):
+        holds (list):
         cargo (list):
 
     Returns:
         Boolean
     """
-    cargo_slots = len(capacity)
+    cargo_slots = len(holds)
     final_cargo = [0] * cargo_slots
     for item in cargo:
         for index, slot in enumerate(final_cargo):
-            if slot + item <= CAPACITY[capacity[index]]:
+            if slot + item <= CAPACITY[holds[index]]:
                 final_cargo[index] += item
                 break
             if index+1 == cargo_slots:
