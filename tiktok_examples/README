@@ -1,0 +1,45 @@
+# Intro
+
+These are some small coding challenges from the TikTok recruiting team.
+
+## example01 - Move zeroes to the end
+# Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+# Example:
+# [1,0,12,3]. ==> [1,12,3,0]
+# Input: [0,1,0,3,12]
+# Output: [1,3,12,0,0]
+
+Note:
+# You must do this in-place without making a copy of the array.
+# Minimize the total number of operations.
+# N elements in the array. Runtime complexity O(N)
+
+
+
+## example02 - String Searching
+Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
+
+Examples:
+// s = "leetcode"
+// return 0.
+
+// s = "loveleetcode"
+// return 2.
+
+
+
+
+## example03 - Minimum meeting rooms
+# Given a list of meet start and end time, output minimal number of meeting rooms needed to host all the meetings.
+# Example #1:
+# meetings = [[4, 6], [2, 3], [5, 6]]
+# Return: 2
+# Explain: for 2-3 , we only need 1 room, but we need 2 rooms for meeting 4-6 and 5-6.
+# Example #2:
+# Meetings = [[7,10],[2,4]]
+# Return: 1
+# N intervals, Runtime complexity => O(N^2)
+def isOverlapped(m1,m2):
+    return 1
+# [[4, 6], [4, 7], [5, 6]]
+def minMeetingRooms(me

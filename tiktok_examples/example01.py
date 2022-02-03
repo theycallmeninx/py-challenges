@@ -1,21 +1,5 @@
 #!/usr/bin/python
 
-"""
-# Move zeroes to the end
-# Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-# Example:
-# [1,0,12,3]. ==> [1,12,3,0]
-# Input: [0,1,0,3,12]
-# Output: [1,3,12,0,0]
-
-Note:
-# You must do this in-place without making a copy of the array.
-# Minimize the total number of operations.
-# N elements in the array. Runtime complexity O(N)
-
-
-"""
-
 import time
 
 
@@ -98,8 +82,41 @@ def method04(input):
     return filtered_list
 
 
+def method05(input):
+    """
+
+    Args:
+        input:
+
+    Returns:
+
+    """
+
+    def recur(iter):
+        try:
+            value = next(iter)
+        except StopIteration:
+            value = None
+
+        while value is not None:
+            if value == 0:
+                yield from recur(iter=iter)
+                # print(value)
+                yield value
+            else:
+                # print(value)
+                yield value
+            try:
+                value = next(iter)
+            except StopIteration:
+                value = None
+
+    return recur(iter(input))
+
+
 def run_methods(input):
-    for func in [method03, method04, method01, method02]:
+    for func in [method03, method04, method01, method02, method05]:
+    # for func in [method05]:
         start = time.process_time()
         final = func(input=input)
         proc_time = time.process_time() - start

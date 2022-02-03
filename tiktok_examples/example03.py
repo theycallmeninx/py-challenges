@@ -1,23 +1,5 @@
 #!/usr/bin/python
 
-"""
-#2:
-# Minimum meeting rooms
-# Given a list of meet start and end time, output minimal number of meeting rooms needed to host all the meetings.
-# Example #1:
-# meetings = [[4, 6], [2, 3], [5, 6]]
-# Return: 2
-# Explain: for 2-3 , we only need 1 room, but we need 2 rooms for meeting 4-6 and 5-6.
-# Example #2:
-# Meetings = [[7,10],[2,4]]
-# Return: 1
-# N intervals, Runtime complexity => O(N^2)
-def isOverlapped(m1,m2):
-    return 1
-# [[4, 6], [4, 7], [5, 6]]
-def minMeetingRooms(me
-
-"""
 import time
 
 
