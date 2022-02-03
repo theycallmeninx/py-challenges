@@ -83,13 +83,13 @@ def method04(input):
 
 
 def method05(input):
-    """
+    """ Uses iterators and recursion to run through the list and sorting non-zeroes to the top.
 
     Args:
-        input:
+        input(list): a list of numbers to filter on
 
     Returns:
-
+            list: a sorted list of number with zeroes to the back
     """
 
     def recur(iter):
@@ -101,10 +101,8 @@ def method05(input):
         while value is not None:
             if value == 0:
                 yield from recur(iter=iter)
-                # print(value)
                 yield value
             else:
-                # print(value)
                 yield value
             try:
                 value = next(iter)
@@ -116,7 +114,6 @@ def method05(input):
 
 def run_methods(input):
     for func in [method03, method04, method01, method02, method05]:
-    # for func in [method05]:
         start = time.process_time()
         final = func(input=input)
         proc_time = time.process_time() - start
